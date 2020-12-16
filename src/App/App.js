@@ -35,6 +35,12 @@ class App extends Component {
       .then(() => this.updateReservations())
   }
 
+  cancelReservation = (id) => {
+    console.log(id);
+    apiCalls.cancelReservation(id)
+      .then(() => this.updateReservations())
+  }
+
   updateReservations = () => {
     let updateReservations;
     apiCalls.allReservations()
@@ -56,7 +62,7 @@ class App extends Component {
           <ReservationForm addReservation={this.addReservation}/>
         </div>
         <div className='resy-container'>
-          <Reservations reservations={this.state.reservations}/>
+          <Reservations reservations={this.state.reservations} cancelReservation={this.cancelReservation}/>
         </div>
       </div>
     )
