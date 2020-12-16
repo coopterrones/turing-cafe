@@ -1,5 +1,5 @@
 import React from 'react';
-// import '../styles/ReservationCard.css';
+import '../styles/ReservationCard.css';
 
 const ReservationCard = ({id, name, date, time, number}) => {
   return (
