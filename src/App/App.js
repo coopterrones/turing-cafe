@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
+import { apiCalls } from '../apiCalls';
+import Reservations from '../Components/Reservations';
+import ReservationCard from '../Components/ReservationCard';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      reservations: []
+    }
+  }
   render() {
     return (
       <div className="App">
