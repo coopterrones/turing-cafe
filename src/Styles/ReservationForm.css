@@ -1,0 +1,17 @@
+.reservation-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.reservation-form-input {
+  height: 2em;
+  width: 15vw;
+}
+
+.reservation-form-button {
+  background-color: teal;
+  border: none;
+  color: white;
+  width: 12vw;
+}
