@@ -29,9 +29,24 @@ class App extends Component {
       })
   }
 
-  addReservation = (newReservation) => {
-    this.setState({reservations: [...this.state.reservations, newReservation]});
+  addReservation = ({id, name, date, time, number}) => {
+    const formattedNumber = Number(number);
+    apiCalls.addReservation(id, name, time, date, formattedNumber)
+      .then(() => this.updateReservations())
   }
+
+  updateReservations = () => {
+    let updateReservations;
+    apiCalls.allReservations()
+      .then(data => {
+          updateReservations = data.map(reservation => {
+            return reservation;
+          })
+          this.setState({
+            reservations: updateReservations
+          })
+        })
+      }
 
   render() {
     return (

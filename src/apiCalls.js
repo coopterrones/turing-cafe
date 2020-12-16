@@ -11,7 +11,7 @@ const getData = ( path ) => {
 
 const updateData = ( path, action, id, name, time, date, number ) => {
   return fetch(path, {
-    method: applicationCache,
+    method: action,
     headers: {
       'Content-type': 'application/json',
       'Accept': 'application/json'
