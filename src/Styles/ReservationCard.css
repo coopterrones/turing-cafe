@@ -4,6 +4,15 @@
   background-color: white;
   border-style: solid;
   border-color: teal;
+  color: teal;
   margin: 2em;
   border-radius: 5px;
+}
+
+.reservation-button {
+  height: 15%;
+  width: 75%;
+  background-color: teal;
+  color: white;
+  border: none;
 }
