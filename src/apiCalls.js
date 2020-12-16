@@ -9,7 +9,7 @@ const getData = ( path ) => {
     })
 }
 
-const updateData = ( path ) => {
+const updateData = ( path, action, id, name, time, date, number ) => {
   return fetch(path, {
     method: applicationCache,
     headers: {
@@ -32,7 +32,7 @@ export const apiCalls = {
     return getData('http://localhost:3001/api/v1/reservations');
   },
 
-  addReservation: () => {
-    return updateData('http://localhost:3001/api/v1/reservations');
+  addReservation: (id, name, time, date, number) => {
+    return updateData('http://localhost:3001/api/v1/reservations', 'POST', id, name, time, date, number);
   }
 }

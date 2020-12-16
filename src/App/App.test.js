@@ -1,16 +1,16 @@
 import React from 'react';
-// import ReactDOM, { render } from 'react-dom';
+import ReactDOM, { render } from 'react-dom';
 import App from './App';
-import { render } from '@testing-library/react';
-jest.mock('./App');
+// import { render } from '@testing-library/react';
+// jest.mock('./App');
 
 describe('App' , () => {
 
-  // it('renders without crashing', () => {
-  //   const div = document.createElement('div');
-  //   ReactDOM.render(<App />, div);
-  //   ReactDOM.unmountComponentAtNode(div);
-  // });
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
 
   // it('should be able to add a reservation', () => {
   //   render( <App /> );
