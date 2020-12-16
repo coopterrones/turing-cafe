@@ -11,6 +11,23 @@ class App extends Component {
       reservations: []
     }
   }
+
+  componentDidMount() {
+    this.getData();
+  }
+
+  getData = () => {
+    let updateReservations; 
+    apiCalls.allReservations()
+      .then(data => {
+        updateReservations = data.map(reservation => {
+          return reservation;
+        })
+        this.setState({
+          reservations: updateReservations
+        })
+      })
+  }
   render() {
     return (
       <div className="App">
